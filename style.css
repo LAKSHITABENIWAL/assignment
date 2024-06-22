@@ -1,0 +1,450 @@
+/* Base styles (for desktop by default) */
+.header {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    text-align: center;
+    color: white;
+}
+
+.header .logo {
+    position: absolute;
+    top: 50px;
+    left: 70px;
+    width: 150px; 
+    z-index: 2;
+}
+
+.header-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    opacity: 0.7; 
+}
+
+.header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(18, 18, 18, 0.696); /* Adjust the overlay opacity as needed */
+    z-index: 1;
+}
+
+.text-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    text-align: center;
+    color: white; 
+}
+
+.text-container h1 {
+    font-size: 2.5em;
+    margin: 50px 0;
+    opacity: 1; 
+}
+
+.text-container h3 {
+    font-size: 1.5em;
+    margin-top: 5px;
+    opacity: 1; 
+    white-space: nowrap;
+}
+
+.main {
+    padding: 20px;
+    text-align: left;
+    margin-left: 50px;
+    margin-top: 50px;
+}
+
+.underline {
+    width: 50px; /* Adjust the width of the line as needed */
+    height: 3px; /* Adjust the height of the line as needed */
+    background-color: green; /* Adjust the color as needed */
+    margin: 10px 0; /* Adjust the margin to position the line correctly */
+}
+
+.hardware-trainings h2{
+    font-size: 1.2em; /* Adjusted font size */
+}
+.hardware-trainings {
+    margin-top: 80px;
+    background-color: white;
+}
+
+.awards-recognition {
+    background-color: white;
+}
+
+.grid-container {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.grid-item {
+    padding: 20px;
+    text-align: center;
+    background-color: white;
+    width: 300px;
+    position: relative;
+}
+
+.grid-item img.training-image {
+    margin-top: 50px;
+    max-width: 100%;
+    height: auto;
+    border-radius: 20px;
+}
+
+.grid-item h2 {
+    font-size: 1.5em;
+    margin: 10px 0;
+}
+
+.grid-item .price {
+    font-size: 1.2em;
+    color: #333;
+}
+
+.grid-container.software-training {
+    display: flex;
+    justify-content: space-around; /* Adjust spacing between items */
+    align-items: center;
+    flex-wrap: wrap; /* Ensure items wrap to next line if not enough space */
+}
+
+.grid-container.software-training .grid-item {
+    padding: 20px;
+    text-align: center;
+    width: 250px; /* Adjust width to fit items properly */
+    margin: 10px; /* Adjust margin for spacing between items */
+}
+
+.grid-container.software-training .grid-item img {
+    max-width: 100%; /* Ensure images don't exceed container width */
+    height: auto;
+    border-radius: 10px; /* Rounded corners for images */
+}
+
+.grid-container.software-training .grid-item h2 {
+    font-size: 1.2em; /* Adjusted font size */
+    margin: 10px 0;
+}
+
+.grid-container.software-training .grid-item .price {
+    font-size: 1em; /* Adjusted font size */
+    color: #333;
+}
+
+.awards-recognition {
+    margin-top: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.awards-recognition .content {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.awards-recognition .content h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.awards-recognition .content h2 {
+    font-size: 1.5em;
+    margin-top: 20px;
+}
+
+.awards-recognition .content ul {
+    list-style: none;
+}
+
+.awards-recognition .content ol li {
+    margin-bottom: 10px;
+}
+
+.awards-recognition .content p {
+    margin-top: 20px;
+    font-size: 1em;
+}
+
+.awards-recognition .image {
+    flex: 1;
+    margin-left: 50px;
+    margin-top: 20px;
+}
+
+.awards-recognition .image img {
+    max-width: 70%;
+    height: auto;
+}
+
+.know-more-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 20px;
+    background-color: #4e4f50;
+    color: white;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+/* Navigation bar styling */
+.nav {
+    position: fixed; /* Ensure the nav bar is fixed in position */
+    top: 0;
+    right: 0;
+    height: 100%; /* Full height of the viewport */
+    width: 300px; /* Adjust width as needed */
+    background-color: white; /* White background */
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for separation */
+    z-index: 10; /* Ensure it is above other content */
+    display: flex;
+    flex-direction: column; /* Align items vertically */
+    align-items: flex-start; /* Align items to the start (left) */
+    padding: 20px; /* Padding for inner spacing */
+    box-sizing: border-box; /* Include padding in element's total width and height */
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out; /* Add smooth transition */
+}
+
+.nav.open {
+    transform: translateX(0); /* Move nav bar into view */
+}
+
+.nav ul {
+    list-style: none; /* Remove bullet points */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+    width: 100%; /* Full width of the nav bar */
+}
+
+.nav li {
+    margin: 20px 0; /* Space between nav items */
+}
+
+.nav a {
+    text-decoration: none; /* Remove underline from links */
+    color: black; /* Black text color */
+    font-size: 1.2em; /* Font size */
+    font-weight: bold; /* Bold text */
+}
+
+/* Buy button styling */
+.nav .buy-button {
+    margin-top: 20px; /* Space above the button */
+    padding: 10px 20px; /* Padding for inner spacing */
+    background-color: black; /* Black background */
+    color: white; /* White text */
+    text-align: center; /* Center the text */
+    border: 2px solid black; /* Border styling */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 1em; /* Font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    text-decoration: none; /* Remove underline */
+    display: inline-block; /* Ensure it behaves like a button */
+}
+
+/* Add close button styling */
+.nav .close-button {
+    align-self: flex-end; /* Position close button to the right */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 1.5em; /* Font size */
+    margin-bottom: 20px; /* Space below the close button */
+}
+
+/* Hamburger menu styling */
+.hamburger-menu {
+    position: absolute; /* Position it absolutely within the header */
+    top: 20px; /* Adjust as needed */
+    right: 40px; /* Adjust as needed */
+    z-index: 2; /* Ensure it appears above other content */
+}
+
+.hamburger {
+    font-size: 2em; /* Adjust size as needed */
+    color: white; /* White color */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+.footer {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    background-color: black;
+    color: white;
+    padding: 20px 80px;
+    height: 400px;
+    width: 100%;
+    box-sizing: border-box; /* Ensure padding is included in the element's total width and height */
+}
+
+.left, .right {
+    width: 45%; /* Adjust the width as needed */
+}
+
+.left {
+    text-align: left;
+    font-family: 'Arial', sans-serif; /* Font family */
+    font-size: 14px; /* Adjusted to match the image */
+    margin-top: 50px;
+    margin-left: 50px;
+}
+
+.right {
+    text-align: left;
+    font-family: 'Arial', sans-serif; /* Font family */
+    font-size: 14px; /* Adjusted to match the image */
+    margin-top: 50px;
+}
+
+.footer strong {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.footer br {
+    line-height: 1; 
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: row; /* Display items in a row */
+    align-items: center; /* Center items vertically */
+}
+
+.contact-info i {
+    margin-right: 10px; /* Adjust the space between icon and text */
+    font-size: 1.5em; /* Adjust icon size if needed */
+}
+
+.contact-info span {
+    font-size: 1em; /* Adjust text size if needed */
+}
+
+
+
+
+
+
+/* Mobile styles */
+
+    @media (max-width: 768px) {
+        .header {
+            height: 300px;
+        }
+    
+        .header .logo {
+            top: 20px;
+            left: 20px;
+            width: 100px;
+        }
+    
+        .text-container {
+            width: 90%;
+            max-width: 600px;
+        }
+    
+        .text-container h1 {
+            font-size: 1.5em;
+            margin: 20px 0;
+        }
+        
+        .text-container h3 {
+            font-size: 1em;
+            margin-top: 10px;
+            white-space: normal; /* Allow text to wrap */
+            line-height: 1.2; /* Adjust line height for better readability */
+        }
+    
+        .header-image {
+            opacity: 0.5;
+        }
+    .main {
+        margin-left: 20px;
+        margin-top: 20px;
+    }
+
+    .grid-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .grid-item {
+        width: 90%;
+        margin: 10px 0;
+    }
+    .hardware-training img{
+        max-width: 40%;
+    }
+    .grid-container .single-item.grid-item{
+        width: 90%;
+    }
+    .grid-container.software-training .grid-item {
+        width: 90%;
+    }
+
+    .grid-container.software-training .grid-item img {
+        max-width: 50%; /* Reduce image size slightly */
+    }
+
+    .awards-recognition {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .awards-recognition .content,
+    .awards-recognition .image {
+        width: 90%;
+        margin: 10px 0;
+        font-size: 1em;
+    }
+
+    .nav {
+        width: 100%;
+        height: auto;
+        transform: translateY(-100%);
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .nav.open {
+        transform: translateY(0);
+    }
+
+    .hamburger-menu {
+        right: 20px;
+    }
+
+    .footer {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        padding: 20px;
+    }
+
+    .left, .right {
+        width: 90%;
+        margin: 10px 0;
+    }
+}
