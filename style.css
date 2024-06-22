@@ -77,27 +77,37 @@
 .hardware-trainings h2{
     font-size: 1.2em; /* Adjusted font size */
 }
-.hardware-trainings {
-    margin-top: 80px;
-    background-color: white;
+.section-content {
+    text-align: left;
+    margin-bottom: 20px;
 }
 
-.awards-recognition {
-    background-color: white;
+.section-content p {
+    font-size: 1.2em;
 }
+
 
 .grid-container {
     display: flex;
     justify-content: left;
-    align-items: center;
+    align-items: flex-start; /* Align items to the top */
 }
 
 .grid-item {
-    padding: 20px;
-    text-align: center;
-    background-color: white;
+    
+    
     width: 300px;
     position: relative;
+    margin-left: 0; /* Align with section <p> */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+  
+    margin-bottom: 20px;
 }
 
 .grid-item img.training-image {
@@ -117,14 +127,12 @@
     color: #333;
 }
 
-section p {
-    font-size: 1em;
-}
+
 
 .grid-container.software-training {
     display: flex;
     justify-content: space-around; /* Adjust spacing between items */
-    align-items: center;
+    align-items: flex-start; /* Align items to the top */
     flex-wrap: wrap; /* Ensure items wrap to next line if not enough space */
 }
 
@@ -133,6 +141,7 @@ section p {
     text-align: center;
     width: 250px; /* Adjust width to fit items properly */
     margin: 10px; /* Adjust margin for spacing between items */
+    margin-left: 0; /* Align with section <p> */
 }
 
 .grid-container.software-training .grid-item img {
@@ -177,8 +186,9 @@ section p {
     list-style: none;
 }
 
-.awards-recognition .content ol li {
+.awards-recognition .content li {
     margin-bottom: 10px;
+    
 }
 
 .awards-recognition .content p {
@@ -316,7 +326,7 @@ section p {
 
 .right {
     text-align: left;
-    font-family: 'Arial' /* Font family */
+    font-family: 'Arial', sans-serif; /* Font family */
     font-size: 14px; /* Adjusted to match the image */
     margin-top: 50px;
 }
@@ -388,28 +398,42 @@ section p {
         margin-top: 20px;
     }
 
-    .grid-container {
+    .grid-container,
+    .grid-container.software-training {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start; /* Align items to the start */
+        align-items: flex-start; /* Align items to the top */
+    }
+
+    .grid-item,
+    .grid-container.software-training .grid-item {
+        width: calc(100% - 20px); /* Two items per row with margin */
+        margin: 10px; /* Adjust margin for spacing between items */
+        text-align: left; /* Left align text */
+    }
+
+    .grid-item img,
+    .grid-container.software-training .grid-item img {
+        max-width: 100%; /* Ensure images are responsive */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+
+    .awards-recognition {
         flex-direction: column;
         align-items: center;
     }
 
-    .grid-item {
+    .awards-recognition .content,
+    .awards-recognition .image {
         width: 90%;
-        margin-left: 20px; /* Adjusted to match the alignment of the <p> tag */
+        margin: 10px 0;
     }
 
-    
-
-    .training-image{
-        max-width: 50%;
-    }
-
-    .grid-container.software-training .grid-item {
-        width: 90%;
-    }
-
-    .grid-container.software-training .grid-item img {
-        max-width: 70%; /* Reduce image size slightly */
+    .awards-recognition .image img {
+        max-width: 100%; /* Ensure images are responsive */
+        height: auto; /* Maintain aspect ratio */
     }
 
     .awards-recognition {
