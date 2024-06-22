@@ -333,17 +333,21 @@ section p {
 
 .contact-info {
     display: flex;
-    flex-direction: row; /* Display items in a row */
-    align-items: center; /* Center items vertically */
+    flex-direction: column;
 }
 
-.contact-info i {
-    margin-right: 10px; /* Adjust the space between icon and text */
-    font-size: 1.5em; /* Adjust icon size if needed */
+.contact-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px; /* Adjust the spacing as needed */
 }
 
-.contact-info span {
-    font-size: 1em; /* Adjust text size if needed */
+.contact-item i {
+    margin-right: 10px; /* Adjust the spacing between the icon and text as needed */
+}
+
+.contact-text {
+    display: inline-block;
 }
 
 /* Mobile styles */
