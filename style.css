@@ -316,7 +316,7 @@ section p {
 
 .right {
     text-align: left;
-    font-family: 'Arial', sans-serif; /* Font family */
+    font-family: 'Arial' /* Font family */
     font-size: 14px; /* Adjusted to match the image */
     margin-top: 50px;
 }
