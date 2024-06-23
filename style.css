@@ -1,3 +1,21 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    width: 100%;
+    height: 100%;
+    
+    font-family: Raleway, sans-serif;
+}
+
+header {
+    position: relative;
+    width: 100%;
+}
+
 .header {
     position: relative;
     width: 100%;
@@ -59,6 +77,35 @@
     opacity: 1; 
     white-space: nowrap;
 }
+.whats {
+    position: fixed;
+    bottom: 70px;
+    right: 20px;
+    z-index: 100; /* Ensures it is on top of other elements */
+    display: flex;
+    align-items: center;
+    background-color: white; /* Background color for the container */
+    padding: 10px;
+    border-radius: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.whats p {
+    margin: 0 10px 0 0;
+    font-size: 1em;
+    font-weight: bold;
+    color: black; /* Text color */
+}
+
+.whatsapp-chat {
+   
+    width: 40px; /* Adjust the size of the WhatsApp icon */
+    height: 40px;
+    border-radius: 50%; /* Rounded corners */
+    border: 2px solid #25D366; /* WhatsApp green border */
+    outline: none; /* Remove outline */
+}
+
 
 .main {
     padding: 20px;
@@ -127,7 +174,9 @@
     color: #333;
 }
 
-
+section{
+    margin-top: 80px;
+}
 
 .grid-container.software-training {
     display: flex;
@@ -136,7 +185,7 @@
     flex-wrap: wrap; /* Ensure items wrap to next line if not enough space */
 }
 
-.grid-container.software-training .grid-item {
+.grid-container.software-training .grid-item1 {
     padding: 20px;
     text-align: center;
     width: 250px; /* Adjust width to fit items properly */
@@ -144,18 +193,18 @@
     margin-left: 0; /* Align with section <p> */
 }
 
-.grid-container.software-training .grid-item img {
+.grid-container.software-training .grid-item1 img {
     margin-top: 50px;
     max-width: 120%;
     height: auto;
     border-radius: 20px;
 }
 
-.grid-container.software-training .grid-item h2 {
+.grid-container.software-training .grid-item1 h2 {
     font-size: 1.2em; /* Adjusted font size */
 }
 
-.grid-container.software-training .grid-item .price {
+.grid-container.software-training .grid-item1 .price {
     font-size: 1.2em; /* Adjusted font size */
     color: #333;
 }
@@ -211,14 +260,16 @@
     display: inline-block;
     padding: 10px 20px;
     margin-top: 20px;
-    background-color: #4e4f50;
+    background-color: #557b97;;
     color: white;
     text-align: center;
     border: none;
-    border-radius: 5px;
+    border-radius: 2px;
+    font-family: "Work Sans", sans-serif;
     font-size: 1em;
     cursor: pointer;
     text-decoration: none;
+    font-weight: 600;
 }
 
 /* Navigation bar styling */
@@ -286,18 +337,55 @@
 }
 
 /* Hamburger menu styling */
+/* Hamburger menu styling */
 .hamburger-menu {
-    position: absolute; /* Position it absolutely within the header */
+    position: fixed; /* Change from absolute to fixed */
     top: 20px; /* Adjust as needed */
-    right: 40px; /* Adjust as needed */
-    z-index: 2; /* Ensure it appears above other content */
+    right: 20px; /* Adjust as needed */
+    z-index: 20; /* Ensure it appears above other content */
+    width: 40px; /* Width of the hamburger menu container */
+    height: 40px; /* Height of the hamburger menu container */
+   
+    border-radius: 5px; /* Rounded corners */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
+
 .hamburger {
-    font-size: 2em; /* Adjust size as needed */
-    color: white; /* White color */
-    cursor: pointer; /* Pointer cursor on hover */
+    width: 20px; /* Width of the hamburger icon */
+    height: 15px; /* Height of the hamburger icon */
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer; /* Ensure it shows as clickable */
+    
+   
 }
+
+.hamburger span {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: black; /* Color of the hamburger lines */
+    border-radius: 2px; /* Rounded corners */
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.hamburger span:nth-child(1) {
+    transform-origin: center;
+}
+
+.hamburger span:nth-child(2) {
+    transform-origin: center;
+}
+
+.hamburger span:nth-child(3) {
+    transform-origin: center;
+}
+
 
 .footer {
     margin-top: 50px;
@@ -307,7 +395,7 @@
     background-color: black;
     color: white;
     padding: 20px 80px;
-    height: 400px;
+    height: 500px;
     width: 100%;
     box-sizing: border-box; /* Ensure padding is included in the element's total width and height */
 }
@@ -318,17 +406,20 @@
 
 .left {
     text-align: left;
-    font-family: 'Arial', sans-serif; /* Font family */
+    font-weight: 500;
     font-size: 14px; /* Adjusted to match the image */
     margin-top: 50px;
     margin-left: 50px;
+    font-family: Raleway;
+ 
 }
 
 .right {
     text-align: left;
-    font-family: 'Arial', sans-serif; /* Font family */
-    font-size: 14px; /* Adjusted to match the image */
+    font-family: Raleway;
+    font-size: 14px; 
     margin-top: 50px;
+    font-weight: 500;
 }
 
 .footer strong {
@@ -361,7 +452,11 @@
 }
 
 /* Mobile styles */
-@media (max-width: 768px) {
+
+
+    
+
+@media (max-width: 1026px) and (min-width:760px){
     .header {
         height: 300px;
     }
@@ -373,17 +468,18 @@
     }
 
     .text-container {
-        width: 90%;
-        max-width: 600px;
+        width: calc(100% - 40px); /* Adjust to leave space for padding */
+        max-width: 100%;
+        margin: 0 auto; /* Center the container */
     }
 
     .text-container h1 {
-        font-size: 1.5em;
+        font-size: 2.5em;
         margin: 20px 0;
     }
     
     .text-container h3 {
-        font-size: 1em;
+        font-size: 1.5em;
         margin-top: 10px;
         white-space: normal; /* Allow text to wrap */
         line-height: 1.2; /* Adjust line height for better readability */
@@ -393,54 +489,34 @@
         opacity: 0.5;
     }
 
-    .main {
-        margin-left: 20px;
-        margin-top: 20px;
+    .section-content {
+        text-align: center;
     }
 
-    .grid-container,
+    .section-content p {
+        display: inline-block;
+        text-align: center;
+    }
+
+    .underline {
+        margin-left: 280px;
+    }
+
     .grid-container.software-training {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: flex-start; /* Align items to the start */
-        align-items: flex-start; /* Align items to the top */
+        justify-content: space-between; /* Adjust spacing between items */
+        flex-wrap: wrap; /* Ensure items wrap to the next line if not enough space */
     }
 
-    .grid-item,
-    .grid-container.software-training .grid-item {
-        width: calc(100% - 20px); /* Two items per row with margin */
-        margin: 10px; /* Adjust margin for spacing between items */
-        text-align: left; /* Left align text */
+    .grid-container.software-training .grid-item1 {
+        width: calc(33.333% - 10px); /* Three items per row with reduced margin */
+        margin: 5px; /* Adjust margin for spacing between items */
+        text-align: center; /* Left align text */
     }
 
-    .grid-item img,
-    .grid-container.software-training .grid-item img {
+    .grid-container.software-training .grid-item1 img {
         max-width: 100%; /* Ensure images are responsive */
         height: auto; /* Maintain aspect ratio */
     }
-
-
-    .awards-recognition {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .awards-recognition .content,
-    .awards-recognition .image {
-        width: 90%;
-        margin: 10px 0;
-    }
-
-    .awards-recognition .image img {
-        max-width: 100%; /* Ensure images are responsive */
-        height: auto; /* Maintain aspect ratio */
-    }
-
-    .awards-recognition {
-        flex-direction: column;
-        align-items: center;
-    }
-
     .awards-recognition .content,
     .awards-recognition .image {
         width: 90%;
@@ -456,33 +532,154 @@
     }
 
     .awards-recognition .image img {
-        max-width: 100%; /* Increase image size */
+        max-width: 100%; /* Ensure images are responsive */
+        height: auto; /* Maintain aspect ratio */
     }
 
-    .nav {
-        width: 100%;
-        height: auto;
-        transform: translateY(-100%);
-        transition: transform 0.3s ease-in-out;
-    }
-
-    .nav.open {
-        transform: translateY(0);
-    }
-
+    
     .hamburger-menu {
         right: 20px;
     }
 
     .footer {
-        flex-direction: column;
+        flex-direction: row;
         align-items: center;
-        height: auto;
+        height: 400px;
         padding: 20px;
     }
 
     .left, .right {
         width: 90%;
-        margin: 10px 0;
+        margin-left: 60px;
+        margin-top: 20px;
     }
 }
+
+
+@media (max-width: 760px ) and (min-width:480px) {
+   .text-container {
+        width: calc(100% - 60px); /* Adjust to leave space for padding */
+        max-width: 100%;
+        margin: 0 auto; /* Center the container */
+    }
+    .text-container h1 {
+        font-size: 2em;
+        margin: 20px 0;
+    }
+    
+    .text-container h3 {
+        font-size: 1.3em;
+        margin-top: 10px;
+        white-space: normal; /* Allow text to wrap */
+        line-height: 1.2; /* Adjust line height for better readability */
+    }
+    .grid-container.software-training {
+        justify-content: space-between; /* Adjust spacing between items */
+        flex-wrap: wrap; /* Ensure items wrap to the next line if not enough space */
+    }
+
+    .grid-container.software-training .grid-item1 {
+        width: calc(33.333% - 10px); /* Three items per row with reduced margin */
+        margin: 5px; /* Adjust margin for spacing between items */
+        text-align: center; /* Left align text */
+        font-size: 0.8em;
+    }
+
+    .grid-container.software-training .grid-item1 img {
+        max-width: 100%; /* Ensure images are responsive */
+        height: auto; /* Maintain aspect ratio */
+    }
+    .grid-item {
+        width: calc(33.333% - 10px); /* Three items per row with reduced margin */
+        margin: 5px; /* Adjust margin for spacing between items */
+        text-align: center; /* Left align text */
+        font-size: 0.8em;
+    }
+    .awards-recognition{
+        flex-direction: column;
+    }
+    .awards-recognition .content{
+        width: 100%
+    }
+    .awards-recognition .content h1 {
+        font-size: 1.3em; /* Adjusted font size */
+    }
+
+    .awards-recognition .content h2 {
+        font-size: 1em; /* Adjusted font size */
+    }
+    .footer {
+        flex-direction: column;
+        align-items: center;
+        height: 600px;
+        padding: 20px;
+    }
+
+    .left, .right {
+        width: 50%;
+        margin-left: 20px;
+    }
+}
+@media (max-width: 480px ) and (min-width:120px) {
+    .text-container {
+        width: calc(100% - 50px); /* Adjust to leave space for padding */
+        max-width: 100%;
+        margin: 0 auto; /* Center the container */
+    }
+    .text-container h1 {
+        font-size: 1.8em;
+        margin: 20px 0;
+    }
+    
+    .text-container h3 {
+        font-size: 1em;
+        margin-top: 10px;
+        white-space: normal; /* Allow text to wrap */
+        line-height: 1.2; /* Adjust line height for better readability */
+    }
+    .grid-container.software-training {
+        flex-direction:column;
+        
+    }
+
+    .grid-container.software-training .grid-item1 {
+       
+        text-align: center; /* Left align text */
+        font-size: 0.8em;
+    }
+
+    .grid-container.software-training .grid-item1 img {
+        max-width: 100%; /* Ensure images are responsive */
+        height: auto; /* Maintain aspect ratio */
+    }
+    .awards-recognition{
+        flex-direction: column;
+    }
+    .awards-recognition .content{
+        width: 100%
+    }
+    .awards-recognition .content h1 {
+        font-size: 1.3em; /* Adjusted font size */
+    }
+
+    .awards-recognition .content h2 {
+        font-size: 1em; /* Adjusted font size */
+    }
+    .awards-recognition img{
+        max-height: 100%;
+        max-width: 80%;
+
+    }
+    .footer {
+        flex-direction: column;
+        align-items: center;
+        height: 600px;
+        padding: 20px;
+    }
+
+    .left, .right {
+        width: 50%;
+        margin-left: 20px;
+    }
+}
+

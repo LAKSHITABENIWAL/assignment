@@ -9,10 +9,15 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
+    <div>
         <div class="hamburger-menu">
-            <span class="hamburger">&equiv;</span> <!-- Hamburger menu -->
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </div>
+        
         <nav class="nav">
             <span class="close-button">&times;</span> <!-- Close button -->
             <ul>
@@ -22,6 +27,14 @@
             </ul>
             <a href="#" class="buy-button">Buy Rs. 8,600</a> <!-- Buy button -->
         </nav>
+       <div class="whats"> <p >Chat with us</p>
+        <img src="assets/whatsapp-circle.png" class="whatsapp-chat" alt="whatsapp image"></div>
+       
+        
+       
+        
+        
+        
         <div class="header">
             <img src="assets/logo.png" alt="logo" class="logo">
             <img src="assets/h.png" alt="header image" class="header-image">
@@ -33,7 +46,7 @@
         </div>
     </header>   
     <div class="main">
-        <<section class="hardware-training">
+        <section class="hardware-training">
             <div class="section-content">
                 <p>TRAININGS WITH HARDWARE KIT:</p>
                 <div class="underline"></div>
@@ -54,17 +67,17 @@
                 <div class="underline"></div>
             </div>
             <div class="grid-container software-training">
-                <div class="grid-item">
+                <div class="grid-item1">
                     <img src="assets/ai.png" alt="Artificial Intelligence Training" class="training-image">
                     <h2>Artificial Intelligence Training</h2>
                     <span class="price">Rs. 8,600.00</span>
                 </div>
-                <div class="grid-item">
+                <div class="grid-item1">
                     <img src="assets/Web_Development-01.png" alt="Web Development Training" class="training-image">
                     <h2>Web Development Training</h2>
                     <span class="price">Rs. 8,600.00</span>
                 </div>
-                <div class="grid-item">
+                <div class="grid-item1">
                     <img src="assets/py.png" alt="Python Programming Training" class="training-image">
                     <h2>Python Programming Training</h2>
                     <span class="price">Rs. 8,600.00</span>
@@ -73,7 +86,7 @@
         </section>
         <section class="awards-recognition">
             <div class="content">
-                <h1>Learn from Award Winning Industry Experts</h1>
+                <h3>Learn from Award Winning Industry Experts</h3>
                 <p>All our trainings are taught by engineers and software developers with more than 10 years of industry experience.</p>
                 <h2>Awards and Recognition</h2>
                 <ol type="1">
@@ -96,7 +109,7 @@
                 79, 11th Cross Rd, Binnamangala<br>
                 Indiranagar, Bengaluru<br>
                 Karnataka 560038,India
-                <br><br><br>
+                <br><br><br><br>
                 <div class="contact-info">
                     <div class="contact-item">
                         <i class="fas fa-phone-alt"></i>
@@ -121,6 +134,10 @@
             </div>
         
     </footer>
+    <!-- WhatsApp Chat Button -->
+    <a href="https://wa.me/1234567890" class="whatsapp-chat" target="_blank">
+        <img src="assets/whatsapp.png" alt="Chat with us">
+    </a>
     <script>
         document.querySelector('.close-button').addEventListener('click', function() {
             document.querySelector('.nav').classList.remove('open');
