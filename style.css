@@ -31,7 +31,16 @@ header {
     width: 150px;
     z-index: 2;
 }
-
+.white {
+    background-color: white;
+    position: fixed;
+    top: 0; /* Top position set to 0 */
+    right: 0; /* Right position set to 0 */
+    z-index: -1;
+    height: 200px;
+    width: 200px;
+  }
+  
 .header-image {
     width: 100%;
     height: 100%;
@@ -159,7 +168,7 @@ header {
     margin-bottom: 20px;
 }
 .grid-container .grid-item{
-    margin-left: 25px;
+    margin-left: 15px;
 }
 .grid-item img.training-image {
     margin-top: 50px;
@@ -194,7 +203,7 @@ section {
     text-align: center;
     width: 250px;
     margin: 10px;
-    margin-left: 30px;
+    margin-left: 25px;
 }
 
 .grid-container.software-training .grid-item1 img {
@@ -336,17 +345,29 @@ section {
     margin-bottom: 20px;
 }
 
-.hamburger-menu {
+.white {
+    background-color: white;
     position: fixed;
-    top: 20px;
-    right: 20px;
-    z-index: 20;
+    top: 0;
+    right: 0;
+    z-index: 5;
+    height: 50px;
+    width: 50px;
+    border: 1px solid black; /* Optional: just to see the boundaries of the box */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hamburger-menu {
+    position: relative; /* Changed to relative since it's inside the white box */
     width: 40px;
     height: 40px;
     border-radius: 5px;
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 20; /* Ensuring it's above the white box */
 }
 
 .hamburger {
@@ -365,20 +386,9 @@ section {
     height: 2px;
     background-color: black;
     border-radius: 2px;
-    transition: background-color 0.3s ease;
+   
 }
 
-.hamburger span:nth-child(1) {
-    transform-origin: center;
-}
-
-.hamburger span:nth-child(2) {
-    transform-origin: center;
-}
-
-.hamburger span:nth-child(3) {
-    transform-origin: center;
-}
 
 .footer {
     margin-top: 50px;
@@ -488,12 +498,12 @@ section {
     .underline {
         margin-left: 280px;
     }
-
+    
     .grid-container.software-training {
         justify-content: space-between;
         flex-wrap: wrap;
     }
-
+  
     .grid-container.software-training .grid-item1 {
         width: calc(33.333% - 10px);
         margin: 5px;
