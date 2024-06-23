@@ -352,29 +352,29 @@ section {
     top: 0;
     right: 0;
     z-index: 5;
-    height: 50px;
-    width: 50px;
-    border: 1px solid black; /* Optional: just to see the boundaries of the box */
+    height: 80px;
+    width: 80px;
+    
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .hamburger-menu {
-    position: relative; /* Changed to relative since it's inside the white box */
+    position: fixed; 
     width: 40px;
     height: 40px;
     border-radius: 5px;
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 20; /* Ensuring it's above the white box */
+    z-index: 20; 
 }
 
 .hamburger {
     width: 20px;
     height: 15px;
-    position: relative;
+    position: fixed;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
