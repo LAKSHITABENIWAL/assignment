@@ -167,9 +167,7 @@ header {
     border-radius: 10px;
     margin-bottom: 20px;
 }
-.grid-container .grid-item{
-    margin-left: 15px;
-}
+
 .grid-item img.training-image {
     margin-top: 50px;
     max-width: 100%;
@@ -203,7 +201,7 @@ section {
     text-align: center;
     width: 250px;
     margin: 10px;
-    margin-left: 25px;
+    margin-left: 0;
 }
 
 .grid-container.software-training .grid-item1 img {
@@ -211,15 +209,18 @@ section {
     max-width: 120%;
     height: auto;
     border-radius: 20px;
+   
 }
 
 .grid-container.software-training .grid-item1 h2 {
     font-size: 1.2em;
+    
 }
 
 .grid-container.software-training .grid-item1 .price {
     font-size: 1.2em;
     color: #333;
+    
 }
 
 .awards-recognition {
@@ -504,6 +505,7 @@ section {
         flex-wrap: wrap;
     }
   
+  
     .grid-container.software-training .grid-item1 {
         width: calc(33.333% - 10px);
         margin: 5px;
@@ -641,7 +643,7 @@ section {
     }
 
     .grid-container.software-training .grid-item1 {
-       
+       margin-left: 18px;
         text-align: center; 
         font-size: 0.8em;
     }
