@@ -101,6 +101,7 @@ header {
     font-size: 15px;
 }
 .wc {
+    z-index: 100;
     position: fixed;
     bottom: 100px;
     right: 10px;
@@ -114,7 +115,7 @@ header {
 .main {
     padding: 20px;
     text-align: left;
-    margin-left: 50px;
+    margin-left: 30px;
     margin-top: 50px;
 }
 
