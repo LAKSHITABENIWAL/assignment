@@ -19,16 +19,19 @@
         </div>
         
         <nav class="nav">
-            <span class="close-button">&times;</span> <!-- Close button -->
+            <span class="close-button">&times;</span> 
             <ul>
                 <li><a href="#">Home</a></li>
                 <li><a href="#">IOT and ML</a></li>
                 <li><a href="#">Web Development</a></li>
             </ul>
-            <a href="#" class="buy-button">Buy Rs. 8,600</a> <!-- Buy button -->
+            <a href="#" class="buy-button">Buy Rs. 8,600</a> 
         </nav>
-       <div class="whats"> <p >Chat with us</p>
-        <img src="assets/whatsapp-circle.png" class="whatsapp-chat" alt="whatsapp image"></div>
+        <div class="w">
+            <p>Chat with us</p>
+           
+        </div>
+        <img src="assets/whatsapp-circle.png"  class="wc" alt="whatsapp">
        
         
        
@@ -134,19 +137,17 @@
             </div>
         
     </footer>
-    <!-- WhatsApp Chat Button -->
-    <a href="https://wa.me/1234567890" class="whatsapp-chat" target="_blank">
-        <img src="assets/whatsapp.png" alt="Chat with us">
-    </a>
+    
+    
     <script>
         document.querySelector('.close-button').addEventListener('click', function() {
             document.querySelector('.nav').classList.remove('open');
-            document.querySelector('.hamburger-menu').style.display = 'block'; // Show the hamburger menu
+            document.querySelector('.hamburger-menu').style.display = 'block'; 
         });
 
         document.querySelector('.hamburger').addEventListener('click', function() {
             document.querySelector('.nav').classList.add('open');
-            document.querySelector('.hamburger-menu').style.display = 'none'; // Hide the hamburger menu
+            document.querySelector('.hamburger-menu').style.display = 'none'; 
         });
     </script>
 </body>
